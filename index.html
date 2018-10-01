@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="en">
+<!--<![endif]-->
+
+<head>
+     
+<style> 
+    #mevn{
+  background-color:rgba(41, 0, 43, 0.973);
+    }    
+             #mevn1{
+  background-color:rgba(41, 0, 43, 0.973);
+                 }    
+    #TextColor{
+           color:rgba(235, 213, 17, 0.747);
+    }
+    #intro{
+    }
+    #textg{
+        font-size:2.125rem
+    }
+</style>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+
+    <title>Documentation - Mevn-Cli</title>
+
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/stroke.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <link rel="stylesheet" type="text/css" href="css/prettyPhoto.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <link rel="stylesheet" type="text/css" href="js/syntax-highlighter/styles/shCore.css" media="all">
+    <link rel="stylesheet" type="text/css" href="js/syntax-highlighter/styles/shThemeRDark.css" media="all">
+
+    <!-- CUSTOM -->
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <div class="container">
+
+            <section id="top" class="section docs-heading">
+
+                <div class="row" id="Title">
+                    <div class="col-md-12" >
+                        <div class="big-title text-center" id="mevn1">
+                            <header >
+                                    <h1 align="center">  <pre id="mevn">                                        
+<font color="#3297E3">  __  __                             _ _ </font>
+<font color="#3297E3">   |  \/  | _____   ___ __         ___| (_)</font>  
+<font color="#3297E3">  | |\/| |/ _ \ \ / / '_ \ _____ / __| | |</font> 
+<font color="#3297E3">  | |  | |  __/\ V /| | | |_____| (__| | |</font> 
+<font color="#3297E3"> |_|  |_|\___| \_/ |_| |_|      \___|_|_|</font>
+<p id="TextColor" align="center">Mevn-Cli Documentation Version 1.0.0</p>
+                                </pre> </h1>
+                            </header>
+                        </div>
+                        <!-- end title -->
+                    </div>
+                    <!-- end 12 -->
+                </div>
+                <!-- end row -->
+
+                <hr>
+
+            </section>
+            <!-- end section -->
+
+            <div class="row">
+
+                <div class="col-md-3">
+                    <nav class="docs-sidebar" data-spy="affix" data-offset-top="300" data-offset-bottom="200" role="navigation">
+                        <ul class="nav">
+                            <li><a href="#line1">Getting Started</a></li>
+                            <li><a href="#line2">Available Commands</a></li>
+                            <li><a href="#line7">Using It</a>
+                                <ul class="nav">
+                                    <li><a href="#line7_1">Initialising A Project</a></li>
+                                    <li><a href="#line7_2">Routes</a></li>
+                                    <li><a href="#line7_3">Models-File</a></li>
+                                    <li><a href="#line7_4">Controller-File</a></li>
+                                    <li><a href="#line7_5">Config-File</a></li>
+                                    <li><a href="#line7_6">Server</a></li>
+                                    <li><a href="#line7_7">Client</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#line8">File Structure</a>
+                                <ul class="nav">
+                                    <li><a href="#line8_1">Index.js</a></li>
+                                    <li><a href="#line8_2">Initlib.js</a></li>
+                                    <li><a href="#line8_3">routeslib.js</a></li>
+                                    <li><a href="#line8_4">modelslib.js</a></li>
+                                    <li><a href="#line8_5">controllerlib.js</a></li>
+                                    <li><a href="#line8_6">configlib.js</a></li>
+                                    <li><a href="#line8_7">client.js</a></li>
+                                    <li><a href="#line8_8">server.js</a></li>
+                                    <li><a href="#line8_9">user_schema.js</a></li>
+                                    <li><a href="#line8_10">user_controller.js</a></li>
+                                    <li><a href="#line8_11">figlet.js</a></li>
+                                    <li><a href="#line8_12">index.js(routes)</a></li>
+
+                                </ul>
+                            </li>
+                                                         
+                            <li><a href="#line10">Version History (Changelog)</a></li>
+                            <li><a href="#line11">Copyright and license</a></li>
+                        </ul>
+                    </nav >
+                </div>
+                <div class="col-md-9">
+                    <section class="welcome">
+
+                        <div class="row">
+                            <div class="col-md-12 left-align">
+                                <h2 class="dark-text">Documentation<hr></h2>
+                                <div class="row">
+
+                                    <div class="col-md-12 full">
+                                        <div class="intro1">
+                                            <ul>
+                                                <li><strong>Version : </strong> v 1.0</li>
+                                                <li><strong>Authors  : </strong>Abraham Philip,Thomas Johan Jojo, Ananthu Anil, James George and Alan Mathew</li>
+                                                <li><strong>License : </strong> <a href="https://opensource.org/licenses/MIT" target="_blank">MIT</a></li>
+                                            </ul>
+                                        </div>
+                                        <br>
+                                        <br>
+                                        
+
+                                        <hr>
+                                        <div id="intro">
+                                            <p>MEVN is a scaffolding tool which makes it easy to build universal apps using Mongo, Express, Vue and NodeJS. It minimises the setup time and gets you up to speed using proven technologies.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end row -->
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="line1" class="section">
+
+                        <div class="row">
+                            <div class="col-md-12 left-align">
+                                <h2 class="dark-text">Getting Started <a href="#top">#back to top</a><hr></h2>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p>A <strong>CLI tool</strong> for getting started with MEVN stack. It offers a super simple boilerplate project and additional utilities for building a MEVN app. It helps for beginner developers to easily create a template for their Web application development.</p>
+
+                                <h4 class="dark-text">Prerequisites</h4>
+                                <p>________________</p>
+                            <p>
+                                <ul class="pre3">
+                                    <li><strong>Npm</strong> - it is a package manager for the JavaScript programming language.
+
+                                    </li>
+                                    <li><strong>Node.js</strong> -Node.js is an open-source, cross-platform JavaScript run-time environment that executes JavaScript code 
+                                        outside of a browser.
+                                    </li>
+                                        <li><strong>Git</strong> - Git is a version control system for tracking changes in computer files and coordinating work on those files among multiple people.
+                                             It is primarily used for source code management in software development.
+                                        </li>
+                                </ul>
+                            </p>
+                            <h4 class="dark-text">Installing</h4>
+                            <p>
+                                    To install the package :- 
+                            </p>
+                            <pre class="pre4" style=" margin-bottom:-5px;margin-top: -5px;"><code><b>npm install -g mevn-cli</b>
+                                </code></pre>
+                                <h4 class="dark-text">Quickstart</h4>
+                                <pre class="pre4"> <code><b>
+ npm install -g mevn-cli
+ mevn-cli init "Desired File Name"
+ 
+                                </b></code></pre>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                    </section>
+                    <!-- end section -->
+
+                    <section id="line2" class="section">
+
+                        <div class="row">
+                            <div class="col-md-12 left-align">
+                                <h2 class="dark-text">Available Commands <a href="#top">#back to top</a><hr></h2>
+                                <h4 class="dark-text" id="textg">Initial Commands</h4>
+                                <pre class="pre4"> <code><b>                                                                                                                            
+                            <ol style="font-size:1vw;padding:auto; margin-top:-70px; margin-bottom:-20px">
+                                <li> mevn-cli init appname -  <font style="color:rgba(43, 40, 40, 0.411); padding:inherit;">To initialize the project.</font></li>  
+                            </ol></b></code></pre></li>
+                                <h4 class="dark-text" id="textg">General Commands</h4>
+                                        <pre class="pre4"> <code><b>                                                                                                                            
+                                    <ol style="font-size:1vw;margin-top:-60px; margin-bottom:-10px">
+                                        <li><strong size="50%"> mevn-cli create:route</strong> <font style="color:rgba(43, 40, 40, 0.411);">- To create the Routes-File(API)</font></li>
+                                        <li> mevn-cli create:model <font style="color:rgba(12, 11, 11, 0.411);">- To create the Models-File(SCHEMA)</font> </li>
+                                        <li>mevn-cli create:controller <font style="color:rgba(14, 13, 13, 0.397);">- To create the Controller-File</font></li>
+                                        <li>mevn-cli create:config<font style="color:rgba(34, 32, 32, 0.411);">- To create the Config-File</font> </li>
+                                          
+                                         
+                                    </ol></b></code></pre>
+                                    <h4 class="dark-text" id="textg">Server Commands</h4>
+                                        <pre class="pre4"> <code><b>                                                                                                                            
+                                    <ol  style="font-size:1vw;margin-top:-50px; margin-bottom:-10px;">
+                                        <li>mevn-cli run:server -  <font style="color:rgba(43, 40, 40, 0.411);">To run the Server</font></li>
+                                        <li> mevn-cli run:client -  <font style="color:rgba(43, 40, 40, 0.411);">To run the Client</font></li>
+                                         
+                                    </ol></b></code></pre></li>
+                                  
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+                        <hr>
+                    
+                    <section id="line7" class="section">
+
+                        <div class="row">
+                            <div class="col-md-12 left-align">
+                                <h2 class="dark-text">Using It <a href="#top">#back to top</a><hr></h2>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row">
+                            <div class="col-md-8">
+                                <a href="upload/INIT.gif" data-rel="prettyPhoto"><img src="images/upload/INIT.gif" alt="" class="img-responsive img-thumbnail" usemap="images/upload/INIT.gif"></a>
+                            </div>
+
+                            <div class="col-md-4">
+                                <h4 id="line7_1">Initialising A Project - <a href="#top">#back to top</a></h4>
+                                <p>
+                                   The Project is initialised by entering the Init command and entering your desired AppName and Type of BoilerPlate you want.
+                                </p>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                        <hr>
+
+                        <div class="row">
+                            <div class="col-md-8">
+                                <a href="upload/route.gif"><img src="images/upload/route.gif" alt="" class="img-responsive img-INIT"></a>
+                            </div>
+
+                            <div class="col-md-4">
+                                <h4 id="line7_2">Routes-File - <a href="#top">#back to top</a></h4>
+                                <p>This Command is used to create the Routes File required to generate necessary code for routing purposes.</p>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                        <hr>
+
+                        <div class="row">
+                            <div class="col-md-8">
+                                <a href="upload/models.gif"><img src="images/upload/models.gif" alt="" class="img-responsive img-thumbnail"></a>
+                            </div>
+
+                            <div class="col-md-4">
+                                <h4 id="line7_3">Models-File - <a href="#top">#back to top</a></h4>
+                                <p>This Command is used to create Models-File which is used for creating some Database Schema Definitions.</p>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                        <hr>
+
+                        <div class="row">
+                            <div class="col-md-8">
+                                <a href="upload/controller.gif"><img src="images/upload/controller.gif" alt="" class="img-responsive img-thumbnail"></a>
+                            </div>
+
+                            <div class="col-md-4">
+                                <h4 id="line7_4">Controller-File - <a href="#top">#back to top</a></h4>
+                                <p>This is used to create the controller file which contains the logic part.</p>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                        <hr>
+
+                        <div class="row">
+                            <div class="col-md-8">
+                                <a href="upload/config.gif"><img src="images/upload/config.gif" alt="" class="img-responsive img-thumbnail"></a>
+                            </div>
+
+                            <div class="col-md-4">
+                                <h4 id="line7_5">Config-File - <a href="#top">#back to top</a></h4>
+                                <p>It is used to create the Config-File which grabs the database from the user.</p>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                        <hr>
+
+                        <div class="row">
+                            <div class="col-md-8">
+                                <a href="upload/Server_Small.gif"><img src="images/upload/Server_Small.gif" alt="" class="img-responsive img-thumbnail"></a>
+                            </div>
+
+                            <div class="col-md-4">
+                                <h4 id="line7_6">Server - <a href="#top">#back to top</a></h4>
+                                <p>This command is used to Run Server.</p>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                        <hr>
+
+                        <div class="row">
+                            <div class="col-md-8">
+                                <a href="upload/Client1_Small.gif"><img src="images/upload/Client1_Small.gif" alt="" class="img-responsive img-thumbnail"></a>
+                            </div>
+
+                            <div class="col-md-4">
+                                <h4 id="line7_7">Client - <a href="#top">#back to top</a></h4>
+                                <p>This command is used to Run Client.</p>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                    </section>
+                    <!-- end section -->
+
+                    <section id="line8" class="section">
+
+                        <div class="row">
+                            <div class="col-md-12 left-align">
+                                <h2 class="dark-text">File Structure <a href="#top">#back to top</a><hr></h2>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    
+                                    <h4 id="line8_1">Index.js</h4>
+    
+                                    <pre class="brush: js; highlight: [2,4]">
+                                            
+                                            #!/usr/bin/env node
+
+                                        'use strict'
+
+                                        // Require() includes modules from other files
+                                        const program = require('commander');
+
+                                        // Including the modules from the lib 
+                                        const init = require('./lib/commands/initlib');
+                                        const models = require('./lib/commands/modelslib');
+                                        const controllers = require('./lib/commands/controllerslib');
+                                        const routes = require('./lib/commands/routeslib');
+                                        const config = require('./lib/commands/configlib');
+                                        const server = require('./lib/run/server');
+                                        const client = require('./lib/run/client');
+
+                                        //Calling the functions from the modules
+                                        let initcommand = init.initfunction;
+                                        let modelscommand = models.modelsfunction;
+                                        let controllerscommand = controllers.controllersfunction;
+                                        let routescommand = routes.routesfunction;
+                                        let configcommand = config.configfunction;
+                                        let runserver = server.serverfunction;
+                                        let runclient = client.clientfunction;
+
+                                        // Displays version
+                                        program
+                                        .version('1.0.0', '-v --version')
+                                        .description('A cli tool for MEVN stack.')
+
+                                        //To bring in the project
+                                        program
+                                        .command('init *appname*')
+                                        .description('To init the project')
+                                        .action(initcommand);
+
+                                        //To create the controllers file
+                                        program
+                                        .command('create:controller')
+                                        .description('To create controllers-file')
+                                        .action(controllerscommand);
+
+                                        // To create router file
+                                        program
+                                        .command('create:route')
+                                        .description('To create router-file')
+                                        .action(routescommand);
+
+                                        // To create the configuration file
+                                        program
+                                        .command('create:config')
+                                        .description('To create configuration file for database')
+                                        .action(configcommand);
+
+                                        //To create models-file
+                                        program
+                                        .command('create:model')
+                                        .description('To create models-file')
+                                        .action(modelscommand);
+
+                                        // To run the client
+                                        program
+                                        .command('run:client')
+                                        .description('To run client')
+                                        .action(runclient);
+
+                                        // To run server
+                                        program
+                                        .command('run:server')
+                                        .description('To run server')
+                                        .action(runserver);
+
+                                        //For reading the program code 
+                                        program.parse(process.argv);
+
+                                      </pre>
+    
+                                    <p><b>Index.js is the main JavaScript file in which all the modules are called and all the commands are shown and executed. Index.js uses commander for handling command line interface in a more effective manner. </b></p>
+                        </div>
+                        <!-- end row -->
+
+                        <hr>
+
+                        <div class="row">
+                                <h4 id="line8_2">Initlib.js - <a href="#top">#back to top</a></h4>
+                                <pre class="brush: js; highlight: [2,4]">    
+                                        // This function displays the server commands menu and the commands to run 
+                                        let showTables = () => {
+                                          console.log(chalk.yellow('server commands:-'));
+                                                  serverCommands.push({
+                                                    'mevn-cli create:model': 'To create models file'  
+                                                  }, {
+                                                    'mevn-cli create:route' : 'To create routes file'
+                                                  }, {
+                                                    'mevn-cli create:controller': 'To create controllers file'
+                                                  }, {
+                                                    'mevn-cli create:config': 'To create config file'
+                                                  });
+                                                  console.log(serverCommands.toString());
+                                        
+                                                  // This block of code displays the  commands to run
+                                                  console.log(chalk.yellow('\ncommands to run:-'));
+                                                  generalCommands.push({
+                                                    'mevn-cli run:server': 'To run server'
+                                                  }, {
+                                                    'mevn-cli run:client': 'To run client'
+                                                  });
+                                                  console.log(generalCommands.toString());
+                                        
+                                                   // Displays the warning not to delete the mevn. json file
+                                                  console.log(chalk.redBright('\n\nwarning:'));
+                                                  console.log('Do not delete mevn.json file');
+                                        
+                                        }
+                                        
+                                        let initfunction = (dir) => {
+                                        
+                                          heading.figletfunction();//figletfunction is a funtion which is used for the stylized Mevn-Cli heading
+                                          console.log('\n');
+                                          
+                                          let initialSpinner = setInterval(() => {                      // Displays the initializing loading text
+                                            logUpdate('Initializing ' + chalk.cyan.bold.dim(frame()));
+                                          }, 50);
+                                        
+                                          setTimeout(() => {
+                                        
+                                            clearInterval(initialSpinner);//Stops the variable initialspinner
+                                            logUpdate.clear();            // Log overwrites the previous output in the terminal and the clear property clears all variables from the current workspace
+                                            console.log('\n');
+                                            
+                                            inquirer.prompt([{//Displays the prompt 'please select one' with the options being 'pwa,basic'
+                                              name: 'initial',
+                                              type: 'list',
+                                              message: 'Please select one',
+                                              choices: ['pwa', 'basic']
+                                            }]).then((answers) => { 
+                                              fs.writeFile(os.homedir() + '/mevn.json', '{\n  \"project_name\": \"' + process.cwd() + '/' +  dir + '\"\n}', (err) => {
+                                                if (err) {
+                                                  throw err;
+                                                }
+                                              });
+                                            
+                                              fs.writeFile('./mevn.json', '{\n  \"project_name\": \"' +  dir + '\"\n}', (err) => { // Writes the project name to the home directory
+                                                if (err) {
+                                                  throw err;
+                                                }
+                                              });
+                                                /*The block of  code that gets executed  when the choice is basic(from basic,pwa options), Which is when the project type is basic  instead of pwa */   
+                                        
+                                              if (answers.initial + '' == 'basic') {
+                                                
+                                                shell.exec(`${boilerplate.basic}`, {silent: true}, {async: true});
+                                        
+                                                let fetchSpinner = setInterval(() => {// This group of code brings back the loading screen which will show "fetching the boilerplate"
+                                                  logUpdate('Fetching the boilerplate ' + chalk.cyan.bold.dim(frame()));
+                                              }, 50); 
+                                        
+                                                // THE SECTION TO DISPLAY THE MENU FOR BASIC
+                                                setTimeout(() =>{
+                                                  
+                                                  console.log('\n');
+                                                  clearInterval(fetchSpinner);// Stops the execution of the previous loading screen and clears it
+                                                  logUpdate.clear();
+                                                  showTables();
+                                                
+                                                }, 5000);
+                                        
+                                                // Executes the shell commands
+                                                if (os.type() + '' == 'Linux') {
+                                                  shell.exec('mv mevn-boilerplate ' + dir);
+                                                } else if (os.type() + '' == 'Windows_NT') {
+                                                  shell.exec('ren mevn-boilerplate ' + dir);
+                                                } else if (os.type() + '' == 'darwin') {
+                                                  shell.exec('mv mevn-boilerplate ' + dir);
+                                                }
+                                        
+                                              } else {
+                                                shell.exec(`${boilerplate.pwa}`, {silent: true}, {async: true});
+                                        
+                                                // Displays the loading text for fetching boilerplate
+                                                let pwafetchSpinner = setInterval(() => {
+                                                  logUpdate('Fetching the boilerplate ' + chalk.cyan.bold.dim(frame()));
+                                              }, 50);
+                                                 
+                                                // THE SECTON TO DISPLAY THE MENU FOR PWA
+                                                setTimeout(() =>{
+                                        
+                                                  
+                                                  console.log('\n');
+                                        
+                                                  // Stops the loading screen and clears it
+                                                  clearInterval(pwafetchSpinner);
+                                                  logUpdate.clear();
+                                        
+                                                  showTables();         
+                                        
+                                                }, 5000);
+                                        
+                                                // Executes the shell commands
+                                                if (os.type() + '' == 'Linux') {
+                                                  shell.exec('mv mevn-pwa-boilerplate ' + dir);
+                                                } else if (os.type() + '' == 'Windows_NT') {
+                                                  shell.exec('ren mevn-pwa-boilerplate ' + dir);
+                                                } else if (os.type() + '' == 'darwin') {
+                                                  shell.exec('mv mevn-pwa-boilerplate ' + dir);
+                                                }
+                                              }
+                                        
+                                            })
+                                          }, 1000);
+                                        }
+                                        exports.initfunction = initfunction;
+                                 </pre>
+                                <p><b>The JavaScript file "initlib.js", displays all the server commands and commands to run. It also writes the project name into the home directory.</b></p>
+
+                        </div>
+                        <!-- end row -->
+
+                        <hr>
+
+                        <div class="row">
+                                <h4 id="line8_3">routeslib.js- <a href="#top">#back to top</a></h4>
+                                <pre class="brush: js; highlight: [2,4]">
+                                        // Referencing index.js using routesFile
+                                        let routesFile = fs.readFileSync(__dirname + '/files/routes/index.js', 'utf8'); 
+                                        
+                                        // Function for creating the route file 
+                                        let routesfunction = () => {
+                                        
+                                          //Converting the json string into an object and the shell function changes to the respective directories
+                                          let data = fs.readFileSync('./mevn.json', 'utf8');
+                                          let appname = JSON.parse(data);
+                                          shell.cd(appname.project_name);
+                                          shell.cd('server');
+                                          shell.cd('routes');
+                                        
+                                          //Writes the routesFile into index.js
+                                          fs.writeFile('./index.js', routesFile, (err) => {
+                                            if (err) {
+                                              throw err
+                                            } else {
+                                              console.log(chalk.yellow('File created...!'));
+                                            }
+                                          })
+                                        }
+                                        exports.routesfunction = routesfunction;                                        
+                                </pre>
+                            
+                                <p><b>It will create a file name Index.js with quite a bit of boilerplate to start out with. It will contain the necessary codes for routing purposes.</b></p>
+                           
+                        </div>
+                        <!-- end row -->
+
+                        <hr>
+
+                        <div class="row">
+                                <h4 id="line8_4">modelslib.js- <a href="#top">#back to top</a></h4>
+                                <pre class="brush: js; highlight: [2,4]">
+                                        // referencing user_schema.js with userSchema
+                                        let userSchema = fs.readFileSync(__dirname + '/files/models/user_schema.js', 'utf8');
+                                        
+                                        let modelsfunction = () => {
+                                          // converting the json string into an object and the shell function changes to the respective directories
+                                          let data = fs.readFileSync('./mevn.json', 'utf8');
+                                          let appname = JSON.parse(data);
+                                          shell.cd(appname.project_name);
+                                          shell.cd('server');
+                                          shell.cd('models');
+                                        
+                                          // executing the respective shell command for Linux,darwin and windows
+                                            if(os.type() === 'Linux' || os.type() === 'darwin'){
+                                             shell.exec('rm default.js');
+                                          } else{
+                                            shell.exec('del default.js');
+                                          }
+                                        
+                                        // writes the userSchema into index.js
+                                          fs.writeFile('./index.js', userSchema, (err) => {
+                                            if (err) {
+                                              throw err;
+                                            } else {
+                                              console.log(chalk.yellow('File created...!'));
+                                            }
+                                          })
+                                        }
+                                        exports.modelsfunction = modelsfunction;                                        
+                                </pre>
+                                <p><b>Modelslib.js involves with the database Schema definitions, which are the fields and their types, etc., within the DB.</b></p>
+                           
+                        </div>
+                        <!-- end row -->
+
+                        <hr>
+
+                        <div class="row">
+                            <h4 id="line8_5"> controllerlib.js- <a href="#top">#back to top</a></h4>
+                            <pre class="brush: js; highlight: [2,4]">
+                                    // Referencing user_controller.js using controllersFile
+                                    let controllersFile = fs.readFileSync(__dirname + '/files/controllers/user_controller.js', 'utf8');
+                                    
+                                    // Funtion for creating the controllers-file
+                                    let controllersfunction = () => {
+                                    
+                                      //Converting the json string into an object and the shell function changes to the respective directories
+                                      let data = fs.readFileSync('./mevn.json', 'utf8');
+                                      let appname = JSON.parse(data);
+                                      shell.cd(appname.project_name);
+                                      shell.cd('server');
+                                      shell.cd('controllers');
+                                    
+                                      //Executing the respective shell command for Linux,Darwin and Windows
+                                      if(os.type() === 'Linux' || os.type() === 'darwin'){
+                                         shell.exec('rm default.js');
+                                      } else{
+                                        shell.exec('del default.js');
+                                      }
+                                    
+                                      // Writes the created controllerFile into index.js
+                                      fs.writeFile('./index.js', controllersFile, (err) => {
+                                        if (err) {
+                                          throw err;
+                                        } else {
+                                          console.log(chalk.yellow('File created...!'));
+                                        }
+                                      })
+                                    }
+                                    exports.controllersfunction = controllersfunction;                                    
+                            </pre>
+                                <p><b>The controller.js deals with what should happen with the user hit the endpoint.</b></p>
+                        
+                        </div>
+                        <!-- end row -->
+
+                        <hr>
+
+                        <div class="row">
+                                <h4 id="line8_6"> configlib.js- <a href="#top">#back to top</a></h4>
+                                <pre class="brush: js; highlight: [2,4]">
+                                        // Function for creating the configuration file for database
+                                        let configfunction = () => {
+                                        
+                                          //Converting the json string into an object and then executes the shell commands
+                                          let data = fs.readFileSync('./mevn.json', 'utf8');
+                                          let appname = JSON.parse(data);
+                                          shell.cd(appname.project_name);
+                                          shell.cd('server');
+                                          shell.cd('config');
+                                        
+                                          //Storing the input in the answers hash under db to call in later
+                                        
+                                          inquirer.prompt([{
+                                            name: 'db',
+                                            type: 'input',
+                                            message: 'Enter the url for the database : '
+                                          }]).then((answers) => {
+                                        
+                                            // Writes or replaces the answers into the path config.js
+                                            // Err - brings in the error dialogue box
+                                        
+                                            fs.writeFile('./config.js', 'module.exports = {\n  \'url\': "' + answers.db + '"\n}', (err) => {
+                                              if (err) {
+                                                throw err;
+                                              } else {
+                                                console.log(chalk.yellow('File created...!'));
+                                              }
+                                            })
+                                          
+                                          });
+                                        }
+                                        exports.configfunction = configfunction;                                        
+                                </pre>
+                                
+                                <p><b>Configlib.js takes the URL from the user for the database.</b></p>
+                        </div>
+                        <!-- end row -->
+
+                        <hr>
+
+                        <div class="row">
+                                <h4 id="line8_7">client.js - <a href="#top">#back to top</a></h4>
+                                <pre class="brush: js; highlight: [2,4]">
+                                        let clientfunction = () => {
+
+                                            heading.figletfunction();
+                                            
+                                            // References the current directoy's mevn.json file through the variable data
+                                            let data = fs.readFileSync(process.cwd() + '/mevn.json', 'utf8');
+                                            let appname = JSON.parse(data);
+                                            shell.cd(appname.project_name);
+                                            shell.cd('client');
+                                          
+                                            // Starts the execution of the loading screen
+                                            let frame = elegantSpinner();
+                                            let runSpinner = setInterval(() => {
+                                              logUpdate(chalk.green.bold('Installing dependencies in the background. Hold on... ') + chalk.cyan.bold.dim(frame()));
+                                              }, 50);
+                                          
+                                            // runs the npm intall command in the command line in the background 
+                                            cmd.get('npm install', (err, data, stderr) => {
+                                              clearInterval(runSpinner);
+                                              logUpdate.clear();
+                                              if(err){
+                                                console.log(chalk.red.bold('Something went wrong. Couldn\'t install the required packages!'));
+                                                exit(1);
+                                              }
+                                              // console.log(data)
+                                              console.log(chalk.green.bold('You\'re all set.'));
+                                              setTimeout(() => {
+                                                shell.exec('npm run dev');
+                                              }, 200);
+                                            })  
+                                          }
+                                          exports.clientfunction = clientfunction;
+                                          
+                                </pre>
+                                
+                                <p><b>Client.js sets up clientside and installs the dependencies in the background.</b></p>
+                        </div>
+                        <!-- end row -->
+                        <div class="row">
+                                <h4 id="line8_8"> server.js- <a href="#top">#back to top</a></h4>
+                                <pre class="brush: js; highlight: [2,4]">
+                                        // Function to set up the server
+                                        let serverfunction = () => {
+                                        
+                                          heading.figletfunction();
+                                        
+                                          // References the current directory's mevn.json file through the data variable
+                                          let data = fs.readFileSync(process.cwd() + '/mevn.json', 'utf8');
+                                          let appname = JSON.parse(data);
+                                          shell.cd(appname.project_name);
+                                          shell.cd('server');
+                                        
+                                          // Loading screen code
+                                          let frame = elegantSpinner();
+                                          let runSpinner = setInterval(() => {
+                                            logUpdate(chalk.green.bold('Installing dependencies in the background. Hold on... ') + chalk.cyan.bold.dim(frame()));
+                                            }, 50);
+                                        
+                                           // Runs the npm intall command in the command line in the background
+                                          cmd.get('npm install', (err, data, stderr) => {
+                                            clearInterval(runSpinner);
+                                            logUpdate.clear();  // Clears the loading screen after the process in the background is completed
+                                            if(err){
+                                              console.log(chalk.red.bold('Something went wrong. Couldn\'t install the required packages!'));
+                                              exit(1);
+                                            }
+                                            // console.log(data)
+                                            console.log(chalk.green.bold('You\'re all set.'));
+                                            setTimeout(() => {
+                                              shell.exec('npm start');
+                                            }, 200);
+                                          })
+                                        }
+                                        exports.serverfunction = serverfunction;                                        
+                                </pre>
+
+                                <p><b>Server.js sets up serverside and installs the dependencies in the background.</b></p>
+                        </div>
+                        <!-- end row -->
+                        <div class="row">
+                                <h4 id="line8_9">user_schema.js - <a href="#top">#back to top</a></h4>
+                                <pre class="brush: js; highlight: [2,4]">
+                                        // Imports mongoose which is an object modelling tool
+                                        import mongoose from 'mongoose';
+                                        const Schema = mongoose.Schema;
+                                        
+                                        // This block of code defines the model using schema interface
+                                        let userSchema = new Schema({ 
+                                           
+                                          name: { 
+                                            type: String,
+                                            required: [true, 'Name is required']  }
+                                          });
+                                        
+                                        let User = mongoose.model(answers.schemaName , userSchema);
+                                        module.exports = User; //Exports the model "user'                                        
+                                </pre>
+                                
+                                <p><b>Imports mongoose which is an object modelling tool and defines the userSchema object model using the schema interface.</b></p>
+                        </div>
+                        <!-- end row -->
+                        <div class="row">
+                                <h4 id="line8_10">user_controller.js - <a href="#top">#back to top</a></h4>
+                                <pre class="brush: js; highlight: [2,4]">
+                                        //Importing the user-model from user_scema
+                                        import User from '../models/user_schema';
+                                        
+                                        //Creates the entry using the model 'user" from user_schema
+                                        let createData = (req, res, next) => {
+                                          
+                                          User.create(req.body)
+                                          .then( (err) => {
+                                            if(err){
+                                              return next(err);
+                                            }
+                                            res.send('Entry created successfully!');  
+                                          });
+                                        }
+                                        
+                                        //Finds and sends the required object
+                                        let readData = (req, res, next) => {
+                                          
+                                          User.find( (err, user) => {
+                                            if(err){
+                                              return next(err);
+                                            }
+                                            res.send(user); 
+                                          });
+                                        }
+                                        
+                                        // Finds and updates the object
+                                        let updateData = (req, res, next) => {
+                                          
+                                          User.findByIdAndUpdate(req.params.id, {$set: req.body}, (err, user) => {
+                                            if(err){
+                                              return next(err);
+                                            }
+                                            res.send(user);   
+                                          });
+                                        }
+                                        
+                                        //Finds and removes the entry
+                                        let deleteData = (req, res, next) => {
+                                            
+                                          User.findByIdAndRemove(req.params.id, (err) => {
+                                            if(err){
+                                              return next(err);
+                                            }
+                                            res.send('Entry deleted successfully!');
+                                          });
+                                        }
+                                        
+                                        module.exports = {
+                                            createData,
+                                            readData,
+                                            updateData,
+                                            deleteData
+                                        };                                        
+                                </pre>
+                               
+                                <p><b>User_controller.js defines the necessary controllers.</b></p>
+                        </div>
+                        <!-- end row -->
+                        <hr>
+
+                        <div class="row">
+                                <h4 id="line8_11">figlet.js - <a href="#top">#back to top</a></h4>
+                                <pre class="brush: js; highlight: [2,4]">
+                                        // Function to display the graphics
+                                        let figletfunction = () => {
+                                        
+                                          clear();
+                                          figlet('Mevn-cli', (err, data) => {
+                                            if (err) {
+                                              console.log('Something went wrong...');
+                                              console.dir(err);
+                                              return;
+                                            }
+                                            console.log(chalk.redBright(data));
+                                            console.log(chalk.yellow('Tool for mevn stack.'));
+                                          });
+                                        }
+                                        exports.figletfunction = figletfunction;
+                                </pre>
+                                
+                                <p><b>Figlet.js contains the figletfunction which display the header graphics.</b></p>
+                        </div>
+                        <!-- end row -->
+                        <hr>
+
+                        <div class="row">
+                                <h4 id="line8_12">index.js(routes) - <a href="#top">#back to top</a></h4>
+                                <pre class="brush: js; highlight: [2,4]">
+                                        import express from 'express'; // Importing express for web framework
+
+                                        import {                      //Importing the handler/controller functions for responding to GET, POST, UPDATE, DELETE requests
+                                          createData,                 //from user_controller
+                                          readData,
+                                          updateData,
+                                          deleteData 
+                                        }
+                                        
+                                        from '../controllers/user_controller';
+                                        
+                                        const router = express.Router();
+                                        
+                                        router.post('/enter_api' + answers.api, createData);
+                                        router.get('/enter_api' + answers.api, readData);
+                                        router.update('/enter_api' + answers.api + '/:id', updateData);
+                                        router.delete('/enter_api' + answers.api + '/:id', deleteData);
+                                        
+                                        module.exports = router;                                        
+                                </pre>
+                                
+                                <p><b>Importing express for web framework and the handler/controller functions for responding to GET, POST, UPDATE, DELETE requests from user_controller.</b></p>
+                        </div>
+                        <!-- end row -->
+                        
+                    </section>
+                    <!-- end section -->
+
+                    <section id="line11" class="section">
+
+                        <div class="row">
+                            <div class="col-md-12 left-align">
+                                <h2 class="dark-text">Copyright and license <a href="#top">#back to top</a><hr></h2>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                
+                                <p>Code released under the <a href="https://opensource.org/licenses/MIT" target="_blank">MIT</a> License.</p>                        
+                                <p>For more information about copyright and license check <a href="https://choosealicense.com/" target="_blank">choosealicense.com</a>.</p>
+                            
+                            </div>
+                        </div>
+                        <!-- end row -->
+
+                    </section>
+                    <!-- end section -->
+                </div>
+                <!-- // end .col -->
+
+            </div>
+            <!-- // end .row -->
+
+        </div>
+        <!-- // end container -->
+
+    </div>
+    <!-- end wrapper -->
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/retina.js"></script>
+    <script src="js/jquery.fitvids.js"></script>
+    <script src="js/wow.js"></script>
+    <script src="js/jquery.prettyPhoto.js"></script>
+
+    <!-- CUSTOM PLUGINS -->
+    <script src="js/custom.js"></script>
+    <script src="js/main.js"></script>
+
+    <script src="js/syntax-highlighter/scripts/shCore.js"></script>
+    <script src="js/syntax-highlighter/scripts/shBrushXml.js"></script>
+    <script src="js/syntax-highlighter/scripts/shBrushCss.js"></script>
+    <script src="js/syntax-highlighter/scripts/shBrushJScript.js"></script>
+
+</body>
+
+</html>
