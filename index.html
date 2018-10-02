@@ -108,8 +108,8 @@
                                 </ul>
                             </li>
                             <li><a href="#line8">File Structure</a>
-                                <ul class="nav">
-                                    <li><a href="#line8_1">Index.js</a></li>
+                                 <!--<ul class="nav">
+                                   <li><a href="#line8_1">Index.js</a></li>
                                     <li><a href="#line8_2">Initlib.js</a></li>
                                     <li><a href="#line8_3">routeslib.js</a></li>
                                     <li><a href="#line8_4">modelslib.js</a></li>
@@ -122,7 +122,7 @@
                                     <li><a href="#line8_11">figlet.js</a></li>
                                     <li><a href="#line8_12">index.js(routes)</a></li>
 
-                                </ul>
+                                </ul>-->
                             </li>
                                                          
                             <li><a href="#line10">Version History (Changelog)</a></li>
@@ -197,11 +197,10 @@
                             </p>
                             <pre class="pre4" style=" margin-bottom:-5px;margin-top: -5px;"><code><b>npm install -g mevn-cli</b>
                                 </code></pre>
-                                <h4 class="dark-text">Quickstart</h4>
-                                <pre class="pre4"> <code><b>
- npm install -g mevn-cli
- mevn-cli init "Desired File Name"
- 
+                                <h4 class="dark-text" >Quickstart</h4>
+                                <pre class="pre4"> <code class=pre4_1><b>
+npm install -g mevn-cli
+mevn-cli init "Desired File Name" 
                                 </b></code></pre>
                             </div>
                             <!-- end col -->
@@ -377,611 +376,62 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     
-                                    <h4 id="line8_1">Index.js</h4>
+                                    <h4 id="line8_1">File Hierarchy</h4>
+                                    <p>Modules are the way of organising different domain-specific modules in the project. MEVN-CLI contains the following Modules.</p>
+              <pre class="ps-container ps-theme-default" data-ps-id="44e9037b-7528-a3db-f12a-1a7ff0121587"><code>| - Post
+
+  | - __Mevn-Cli__- // all the tests for this module goes here
+      | - lib // Sub components of this module
+            | - Commands
+              | - routeslib.js
+              | - configlib.js.js
+              | - modelslib.js
+              | - controllerlib.js
+              | - files
+            |-external //sub components of this module
+              |-figlet.js
+
+            | - Run // Sub components of this module
+              | - client.js
+              | - server.js
+
+            | - config.json
+            | - index.js
+            | - package-lock.json
+            | - package.json  
+               
+  </code><div class="ps-scrollbar-x-rail" style="left: 0px; bottom: 3px;"><div class="ps-scrollbar-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps-scrollbar-y-rail" style="top: 0px; right: 3px;"><div class="ps-scrollbar-y" tabindex="0" style="top: 0px; height: 0px;"></div></div></pre>
     
-                                    <pre class="brush: js; highlight: [2,4]">
-                                            
-                                            #!/usr/bin/env node
+                                
+                    </section>
+                <section id="line10" class="section"><!-- end section --> 
+                    <div class="row" id="change">
+                            <div class="col-md-12">
 
-                                        'use strict'
+                            <h4 class="dark-text">Changelog</h4>
+                                <hr style="color:black;">
 
-                                        // Require() includes modules from other files
-                                        const program = require('commander');
-
-                                        // Including the modules from the lib 
-                                        const init = require('./lib/commands/initlib');
-                                        const models = require('./lib/commands/modelslib');
-                                        const controllers = require('./lib/commands/controllerslib');
-                                        const routes = require('./lib/commands/routeslib');
-                                        const config = require('./lib/commands/configlib');
-                                        const server = require('./lib/run/server');
-                                        const client = require('./lib/run/client');
-
-                                        //Calling the functions from the modules
-                                        let initcommand = init.initfunction;
-                                        let modelscommand = models.modelsfunction;
-                                        let controllerscommand = controllers.controllersfunction;
-                                        let routescommand = routes.routesfunction;
-                                        let configcommand = config.configfunction;
-                                        let runserver = server.serverfunction;
-                                        let runclient = client.clientfunction;
-
-                                        // Displays version
-                                        program
-                                        .version('1.0.0', '-v --version')
-                                        .description('A cli tool for MEVN stack.')
-
-                                        //To bring in the project
-                                        program
-                                        .command('init *appname*')
-                                        .description('To init the project')
-                                        .action(initcommand);
-
-                                        //To create the controllers file
-                                        program
-                                        .command('create:controller')
-                                        .description('To create controllers-file')
-                                        .action(controllerscommand);
-
-                                        // To create router file
-                                        program
-                                        .command('create:route')
-                                        .description('To create router-file')
-                                        .action(routescommand);
-
-                                        // To create the configuration file
-                                        program
-                                        .command('create:config')
-                                        .description('To create configuration file for database')
-                                        .action(configcommand);
-
-                                        //To create models-file
-                                        program
-                                        .command('create:model')
-                                        .description('To create models-file')
-                                        .action(modelscommand);
-
-                                        // To run the client
-                                        program
-                                        .command('run:client')
-                                        .description('To run client')
-                                        .action(runclient);
-
-                                        // To run server
-                                        program
-                                        .command('run:server')
-                                        .description('To run server')
-                                        .action(runserver);
-
-                                        //For reading the program code 
-                                        program.parse(process.argv);
+                                <pre class="brush: html">
+                                    ------------------------- Version 3.8.3 - May 7th, 2015 ---------------------------
+                                       
+                                    ------------------------------------------------------------------------------------
+                                    - Minor bug fixes
+                                    - Code clean up andd add elegant-spinner
+                                    - Added pwa boilerplate
+                                    - expand scope of commands
+                                    - Added tables and modif
+                                    - Added new command
+                                    - Command to run the app
+                                    - Added more commands
+                                    - Added Init Command
+                                    - Created Basic structure 
+                                    - Initial commit
 
                                       </pre>
-    
-                                    <p><b>Index.js is the main JavaScript file in which all the modules are called and all the commands are shown and executed. Index.js uses commander for handling command line interface in a more effective manner. </b></p>
+                 </section>
+
+                            </div>
                         </div>
-                        <!-- end row -->
-
-                        <hr>
-
-                        <div class="row">
-                                <h4 id="line8_2">Initlib.js - <a href="#top">#back to top</a></h4>
-                                <pre class="brush: js; highlight: [2,4]">    
-                                        // This function displays the server commands menu and the commands to run 
-                                        let showTables = () => {
-                                          console.log(chalk.yellow('server commands:-'));
-                                                  serverCommands.push({
-                                                    'mevn-cli create:model': 'To create models file'  
-                                                  }, {
-                                                    'mevn-cli create:route' : 'To create routes file'
-                                                  }, {
-                                                    'mevn-cli create:controller': 'To create controllers file'
-                                                  }, {
-                                                    'mevn-cli create:config': 'To create config file'
-                                                  });
-                                                  console.log(serverCommands.toString());
-                                        
-                                                  // This block of code displays the  commands to run
-                                                  console.log(chalk.yellow('\ncommands to run:-'));
-                                                  generalCommands.push({
-                                                    'mevn-cli run:server': 'To run server'
-                                                  }, {
-                                                    'mevn-cli run:client': 'To run client'
-                                                  });
-                                                  console.log(generalCommands.toString());
-                                        
-                                                   // Displays the warning not to delete the mevn. json file
-                                                  console.log(chalk.redBright('\n\nwarning:'));
-                                                  console.log('Do not delete mevn.json file');
-                                        
-                                        }
-                                        
-                                        let initfunction = (dir) => {
-                                        
-                                          heading.figletfunction();//figletfunction is a funtion which is used for the stylized Mevn-Cli heading
-                                          console.log('\n');
-                                          
-                                          let initialSpinner = setInterval(() => {                      // Displays the initializing loading text
-                                            logUpdate('Initializing ' + chalk.cyan.bold.dim(frame()));
-                                          }, 50);
-                                        
-                                          setTimeout(() => {
-                                        
-                                            clearInterval(initialSpinner);//Stops the variable initialspinner
-                                            logUpdate.clear();            // Log overwrites the previous output in the terminal and the clear property clears all variables from the current workspace
-                                            console.log('\n');
-                                            
-                                            inquirer.prompt([{//Displays the prompt 'please select one' with the options being 'pwa,basic'
-                                              name: 'initial',
-                                              type: 'list',
-                                              message: 'Please select one',
-                                              choices: ['pwa', 'basic']
-                                            }]).then((answers) => { 
-                                              fs.writeFile(os.homedir() + '/mevn.json', '{\n  \"project_name\": \"' + process.cwd() + '/' +  dir + '\"\n}', (err) => {
-                                                if (err) {
-                                                  throw err;
-                                                }
-                                              });
-                                            
-                                              fs.writeFile('./mevn.json', '{\n  \"project_name\": \"' +  dir + '\"\n}', (err) => { // Writes the project name to the home directory
-                                                if (err) {
-                                                  throw err;
-                                                }
-                                              });
-                                                /*The block of  code that gets executed  when the choice is basic(from basic,pwa options), Which is when the project type is basic  instead of pwa */   
-                                        
-                                              if (answers.initial + '' == 'basic') {
-                                                
-                                                shell.exec(`${boilerplate.basic}`, {silent: true}, {async: true});
-                                        
-                                                let fetchSpinner = setInterval(() => {// This group of code brings back the loading screen which will show "fetching the boilerplate"
-                                                  logUpdate('Fetching the boilerplate ' + chalk.cyan.bold.dim(frame()));
-                                              }, 50); 
-                                        
-                                                // THE SECTION TO DISPLAY THE MENU FOR BASIC
-                                                setTimeout(() =>{
-                                                  
-                                                  console.log('\n');
-                                                  clearInterval(fetchSpinner);// Stops the execution of the previous loading screen and clears it
-                                                  logUpdate.clear();
-                                                  showTables();
-                                                
-                                                }, 5000);
-                                        
-                                                // Executes the shell commands
-                                                if (os.type() + '' == 'Linux') {
-                                                  shell.exec('mv mevn-boilerplate ' + dir);
-                                                } else if (os.type() + '' == 'Windows_NT') {
-                                                  shell.exec('ren mevn-boilerplate ' + dir);
-                                                } else if (os.type() + '' == 'darwin') {
-                                                  shell.exec('mv mevn-boilerplate ' + dir);
-                                                }
-                                        
-                                              } else {
-                                                shell.exec(`${boilerplate.pwa}`, {silent: true}, {async: true});
-                                        
-                                                // Displays the loading text for fetching boilerplate
-                                                let pwafetchSpinner = setInterval(() => {
-                                                  logUpdate('Fetching the boilerplate ' + chalk.cyan.bold.dim(frame()));
-                                              }, 50);
-                                                 
-                                                // THE SECTON TO DISPLAY THE MENU FOR PWA
-                                                setTimeout(() =>{
-                                        
-                                                  
-                                                  console.log('\n');
-                                        
-                                                  // Stops the loading screen and clears it
-                                                  clearInterval(pwafetchSpinner);
-                                                  logUpdate.clear();
-                                        
-                                                  showTables();         
-                                        
-                                                }, 5000);
-                                        
-                                                // Executes the shell commands
-                                                if (os.type() + '' == 'Linux') {
-                                                  shell.exec('mv mevn-pwa-boilerplate ' + dir);
-                                                } else if (os.type() + '' == 'Windows_NT') {
-                                                  shell.exec('ren mevn-pwa-boilerplate ' + dir);
-                                                } else if (os.type() + '' == 'darwin') {
-                                                  shell.exec('mv mevn-pwa-boilerplate ' + dir);
-                                                }
-                                              }
-                                        
-                                            })
-                                          }, 1000);
-                                        }
-                                        exports.initfunction = initfunction;
-                                 </pre>
-                                <p><b>The JavaScript file "initlib.js", displays all the server commands and commands to run. It also writes the project name into the home directory.</b></p>
-
-                        </div>
-                        <!-- end row -->
-
-                        <hr>
-
-                        <div class="row">
-                                <h4 id="line8_3">routeslib.js- <a href="#top">#back to top</a></h4>
-                                <pre class="brush: js; highlight: [2,4]">
-                                        // Referencing index.js using routesFile
-                                        let routesFile = fs.readFileSync(__dirname + '/files/routes/index.js', 'utf8'); 
-                                        
-                                        // Function for creating the route file 
-                                        let routesfunction = () => {
-                                        
-                                          //Converting the json string into an object and the shell function changes to the respective directories
-                                          let data = fs.readFileSync('./mevn.json', 'utf8');
-                                          let appname = JSON.parse(data);
-                                          shell.cd(appname.project_name);
-                                          shell.cd('server');
-                                          shell.cd('routes');
-                                        
-                                          //Writes the routesFile into index.js
-                                          fs.writeFile('./index.js', routesFile, (err) => {
-                                            if (err) {
-                                              throw err
-                                            } else {
-                                              console.log(chalk.yellow('File created...!'));
-                                            }
-                                          })
-                                        }
-                                        exports.routesfunction = routesfunction;                                        
-                                </pre>
-                            
-                                <p><b>It will create a file name Index.js with quite a bit of boilerplate to start out with. It will contain the necessary codes for routing purposes.</b></p>
-                           
-                        </div>
-                        <!-- end row -->
-
-                        <hr>
-
-                        <div class="row">
-                                <h4 id="line8_4">modelslib.js- <a href="#top">#back to top</a></h4>
-                                <pre class="brush: js; highlight: [2,4]">
-                                        // referencing user_schema.js with userSchema
-                                        let userSchema = fs.readFileSync(__dirname + '/files/models/user_schema.js', 'utf8');
-                                        
-                                        let modelsfunction = () => {
-                                          // converting the json string into an object and the shell function changes to the respective directories
-                                          let data = fs.readFileSync('./mevn.json', 'utf8');
-                                          let appname = JSON.parse(data);
-                                          shell.cd(appname.project_name);
-                                          shell.cd('server');
-                                          shell.cd('models');
-                                        
-                                          // executing the respective shell command for Linux,darwin and windows
-                                            if(os.type() === 'Linux' || os.type() === 'darwin'){
-                                             shell.exec('rm default.js');
-                                          } else{
-                                            shell.exec('del default.js');
-                                          }
-                                        
-                                        // writes the userSchema into index.js
-                                          fs.writeFile('./index.js', userSchema, (err) => {
-                                            if (err) {
-                                              throw err;
-                                            } else {
-                                              console.log(chalk.yellow('File created...!'));
-                                            }
-                                          })
-                                        }
-                                        exports.modelsfunction = modelsfunction;                                        
-                                </pre>
-                                <p><b>Modelslib.js involves with the database Schema definitions, which are the fields and their types, etc., within the DB.</b></p>
-                           
-                        </div>
-                        <!-- end row -->
-
-                        <hr>
-
-                        <div class="row">
-                            <h4 id="line8_5"> controllerlib.js- <a href="#top">#back to top</a></h4>
-                            <pre class="brush: js; highlight: [2,4]">
-                                    // Referencing user_controller.js using controllersFile
-                                    let controllersFile = fs.readFileSync(__dirname + '/files/controllers/user_controller.js', 'utf8');
-                                    
-                                    // Funtion for creating the controllers-file
-                                    let controllersfunction = () => {
-                                    
-                                      //Converting the json string into an object and the shell function changes to the respective directories
-                                      let data = fs.readFileSync('./mevn.json', 'utf8');
-                                      let appname = JSON.parse(data);
-                                      shell.cd(appname.project_name);
-                                      shell.cd('server');
-                                      shell.cd('controllers');
-                                    
-                                      //Executing the respective shell command for Linux,Darwin and Windows
-                                      if(os.type() === 'Linux' || os.type() === 'darwin'){
-                                         shell.exec('rm default.js');
-                                      } else{
-                                        shell.exec('del default.js');
-                                      }
-                                    
-                                      // Writes the created controllerFile into index.js
-                                      fs.writeFile('./index.js', controllersFile, (err) => {
-                                        if (err) {
-                                          throw err;
-                                        } else {
-                                          console.log(chalk.yellow('File created...!'));
-                                        }
-                                      })
-                                    }
-                                    exports.controllersfunction = controllersfunction;                                    
-                            </pre>
-                                <p><b>The controller.js deals with what should happen with the user hit the endpoint.</b></p>
-                        
-                        </div>
-                        <!-- end row -->
-
-                        <hr>
-
-                        <div class="row">
-                                <h4 id="line8_6"> configlib.js- <a href="#top">#back to top</a></h4>
-                                <pre class="brush: js; highlight: [2,4]">
-                                        // Function for creating the configuration file for database
-                                        let configfunction = () => {
-                                        
-                                          //Converting the json string into an object and then executes the shell commands
-                                          let data = fs.readFileSync('./mevn.json', 'utf8');
-                                          let appname = JSON.parse(data);
-                                          shell.cd(appname.project_name);
-                                          shell.cd('server');
-                                          shell.cd('config');
-                                        
-                                          //Storing the input in the answers hash under db to call in later
-                                        
-                                          inquirer.prompt([{
-                                            name: 'db',
-                                            type: 'input',
-                                            message: 'Enter the url for the database : '
-                                          }]).then((answers) => {
-                                        
-                                            // Writes or replaces the answers into the path config.js
-                                            // Err - brings in the error dialogue box
-                                        
-                                            fs.writeFile('./config.js', 'module.exports = {\n  \'url\': "' + answers.db + '"\n}', (err) => {
-                                              if (err) {
-                                                throw err;
-                                              } else {
-                                                console.log(chalk.yellow('File created...!'));
-                                              }
-                                            })
-                                          
-                                          });
-                                        }
-                                        exports.configfunction = configfunction;                                        
-                                </pre>
-                                
-                                <p><b>Configlib.js takes the URL from the user for the database.</b></p>
-                        </div>
-                        <!-- end row -->
-
-                        <hr>
-
-                        <div class="row">
-                                <h4 id="line8_7">client.js - <a href="#top">#back to top</a></h4>
-                                <pre class="brush: js; highlight: [2,4]">
-                                        let clientfunction = () => {
-
-                                            heading.figletfunction();
-                                            
-                                            // References the current directoy's mevn.json file through the variable data
-                                            let data = fs.readFileSync(process.cwd() + '/mevn.json', 'utf8');
-                                            let appname = JSON.parse(data);
-                                            shell.cd(appname.project_name);
-                                            shell.cd('client');
-                                          
-                                            // Starts the execution of the loading screen
-                                            let frame = elegantSpinner();
-                                            let runSpinner = setInterval(() => {
-                                              logUpdate(chalk.green.bold('Installing dependencies in the background. Hold on... ') + chalk.cyan.bold.dim(frame()));
-                                              }, 50);
-                                          
-                                            // runs the npm intall command in the command line in the background 
-                                            cmd.get('npm install', (err, data, stderr) => {
-                                              clearInterval(runSpinner);
-                                              logUpdate.clear();
-                                              if(err){
-                                                console.log(chalk.red.bold('Something went wrong. Couldn\'t install the required packages!'));
-                                                exit(1);
-                                              }
-                                              // console.log(data)
-                                              console.log(chalk.green.bold('You\'re all set.'));
-                                              setTimeout(() => {
-                                                shell.exec('npm run dev');
-                                              }, 200);
-                                            })  
-                                          }
-                                          exports.clientfunction = clientfunction;
-                                          
-                                </pre>
-                                
-                                <p><b>Client.js sets up clientside and installs the dependencies in the background.</b></p>
-                        </div>
-                        <!-- end row -->
-                        <div class="row">
-                                <h4 id="line8_8"> server.js- <a href="#top">#back to top</a></h4>
-                                <pre class="brush: js; highlight: [2,4]">
-                                        // Function to set up the server
-                                        let serverfunction = () => {
-                                        
-                                          heading.figletfunction();
-                                        
-                                          // References the current directory's mevn.json file through the data variable
-                                          let data = fs.readFileSync(process.cwd() + '/mevn.json', 'utf8');
-                                          let appname = JSON.parse(data);
-                                          shell.cd(appname.project_name);
-                                          shell.cd('server');
-                                        
-                                          // Loading screen code
-                                          let frame = elegantSpinner();
-                                          let runSpinner = setInterval(() => {
-                                            logUpdate(chalk.green.bold('Installing dependencies in the background. Hold on... ') + chalk.cyan.bold.dim(frame()));
-                                            }, 50);
-                                        
-                                           // Runs the npm intall command in the command line in the background
-                                          cmd.get('npm install', (err, data, stderr) => {
-                                            clearInterval(runSpinner);
-                                            logUpdate.clear();  // Clears the loading screen after the process in the background is completed
-                                            if(err){
-                                              console.log(chalk.red.bold('Something went wrong. Couldn\'t install the required packages!'));
-                                              exit(1);
-                                            }
-                                            // console.log(data)
-                                            console.log(chalk.green.bold('You\'re all set.'));
-                                            setTimeout(() => {
-                                              shell.exec('npm start');
-                                            }, 200);
-                                          })
-                                        }
-                                        exports.serverfunction = serverfunction;                                        
-                                </pre>
-
-                                <p><b>Server.js sets up serverside and installs the dependencies in the background.</b></p>
-                        </div>
-                        <!-- end row -->
-                        <div class="row">
-                                <h4 id="line8_9">user_schema.js - <a href="#top">#back to top</a></h4>
-                                <pre class="brush: js; highlight: [2,4]">
-                                        // Imports mongoose which is an object modelling tool
-                                        import mongoose from 'mongoose';
-                                        const Schema = mongoose.Schema;
-                                        
-                                        // This block of code defines the model using schema interface
-                                        let userSchema = new Schema({ 
-                                           
-                                          name: { 
-                                            type: String,
-                                            required: [true, 'Name is required']  }
-                                          });
-                                        
-                                        let User = mongoose.model(answers.schemaName , userSchema);
-                                        module.exports = User; //Exports the model "user'                                        
-                                </pre>
-                                
-                                <p><b>Imports mongoose which is an object modelling tool and defines the userSchema object model using the schema interface.</b></p>
-                        </div>
-                        <!-- end row -->
-                        <div class="row">
-                                <h4 id="line8_10">user_controller.js - <a href="#top">#back to top</a></h4>
-                                <pre class="brush: js; highlight: [2,4]">
-                                        //Importing the user-model from user_scema
-                                        import User from '../models/user_schema';
-                                        
-                                        //Creates the entry using the model 'user" from user_schema
-                                        let createData = (req, res, next) => {
-                                          
-                                          User.create(req.body)
-                                          .then( (err) => {
-                                            if(err){
-                                              return next(err);
-                                            }
-                                            res.send('Entry created successfully!');  
-                                          });
-                                        }
-                                        
-                                        //Finds and sends the required object
-                                        let readData = (req, res, next) => {
-                                          
-                                          User.find( (err, user) => {
-                                            if(err){
-                                              return next(err);
-                                            }
-                                            res.send(user); 
-                                          });
-                                        }
-                                        
-                                        // Finds and updates the object
-                                        let updateData = (req, res, next) => {
-                                          
-                                          User.findByIdAndUpdate(req.params.id, {$set: req.body}, (err, user) => {
-                                            if(err){
-                                              return next(err);
-                                            }
-                                            res.send(user);   
-                                          });
-                                        }
-                                        
-                                        //Finds and removes the entry
-                                        let deleteData = (req, res, next) => {
-                                            
-                                          User.findByIdAndRemove(req.params.id, (err) => {
-                                            if(err){
-                                              return next(err);
-                                            }
-                                            res.send('Entry deleted successfully!');
-                                          });
-                                        }
-                                        
-                                        module.exports = {
-                                            createData,
-                                            readData,
-                                            updateData,
-                                            deleteData
-                                        };                                        
-                                </pre>
-                               
-                                <p><b>User_controller.js defines the necessary controllers.</b></p>
-                        </div>
-                        <!-- end row -->
-                        <hr>
-
-                        <div class="row">
-                                <h4 id="line8_11">figlet.js - <a href="#top">#back to top</a></h4>
-                                <pre class="brush: js; highlight: [2,4]">
-                                        // Function to display the graphics
-                                        let figletfunction = () => {
-                                        
-                                          clear();
-                                          figlet('Mevn-cli', (err, data) => {
-                                            if (err) {
-                                              console.log('Something went wrong...');
-                                              console.dir(err);
-                                              return;
-                                            }
-                                            console.log(chalk.redBright(data));
-                                            console.log(chalk.yellow('Tool for mevn stack.'));
-                                          });
-                                        }
-                                        exports.figletfunction = figletfunction;
-                                </pre>
-                                
-                                <p><b>Figlet.js contains the figletfunction which display the header graphics.</b></p>
-                        </div>
-                        <!-- end row -->
-                        <hr>
-
-                        <div class="row">
-                                <h4 id="line8_12">index.js(routes) - <a href="#top">#back to top</a></h4>
-                                <pre class="brush: js; highlight: [2,4]">
-                                        import express from 'express'; // Importing express for web framework
-
-                                        import {                      //Importing the handler/controller functions for responding to GET, POST, UPDATE, DELETE requests
-                                          createData,                 //from user_controller
-                                          readData,
-                                          updateData,
-                                          deleteData 
-                                        }
-                                        
-                                        from '../controllers/user_controller';
-                                        
-                                        const router = express.Router();
-                                        
-                                        router.post('/enter_api' + answers.api, createData);
-                                        router.get('/enter_api' + answers.api, readData);
-                                        router.update('/enter_api' + answers.api + '/:id', updateData);
-                                        router.delete('/enter_api' + answers.api + '/:id', deleteData);
-                                        
-                                        module.exports = router;                                        
-                                </pre>
-                                
-                                <p><b>Importing express for web framework and the handler/controller functions for responding to GET, POST, UPDATE, DELETE requests from user_controller.</b></p>
-                        </div>
-                        <!-- end row -->
-                        
-                    </section>
-                    <!-- end section -->
 
                     <section id="line11" class="section">
 
@@ -1013,6 +463,7 @@
 
         </div>
         <!-- // end container -->
+        
 
     </div>
     <!-- end wrapper -->
