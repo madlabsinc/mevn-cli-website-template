@@ -10,7 +10,7 @@ Mevn-Cli Documentation Version 1.0.0
 
 ```
 
-# Documenation
+# Documentation
 
 **Version**: 1.0.0
 

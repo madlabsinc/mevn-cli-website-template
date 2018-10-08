@@ -1,5 +1,5 @@
 module.exports = {
-    title: 'Mevn-Cli Documenation',
+    title: 'Mevn-Cli Documentation',
     description: 'Official website for mevn-cli.',
 
     themeConfig: {
